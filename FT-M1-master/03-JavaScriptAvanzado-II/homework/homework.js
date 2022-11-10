@@ -70,7 +70,7 @@ porque el resultado estará guardado en la "memoria caché".
       }
     };
   }
-/*
+/* 
 
 
 */
@@ -99,8 +99,7 @@ function getNombre() {
 */
 
 let getNombreInstructor = getNombre.bind(instructor);
-let getNombreAlumno = getNombre.bind(alumno
-  );
+let getNombreAlumno = getNombre.bind(alumno);
 
 /*
   Ejercicio 4
