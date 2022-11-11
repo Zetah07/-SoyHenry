@@ -30,65 +30,83 @@ function Node(value) {
 }
 
 LinkedList.prototype.add = function (value) {
-  
-  const newNode =  new Node(value);
+  const newNode = new Node(value);
   let current = this.head;
 
-  if(current === null){
+  if (current === null) {
     this.head = newNode;
     return value;
   }
 
-  while(current.next !== null){
+  while (current.next !== null) {
     current = current.next;
   }
 
-  current.next = newNode
+  current.next = newNode;
   return value;
-
-}
+};
 
 LinkedList.prototype.remove = function () {
-
-  
+  debugger;
 
   let current = this.head;
 
-  if (current === null) { // CONDICION DE SI ESTA VACIA.
-    return null;
-  } 
+  if (current === null) {
 
-  if (current.next === null) { // SI SOLO EXISTE UN NODO.
-    let numero = current.value
-    this.head = null;
-    return numero
+    return null;
   }
 
-  while (current.next.next) { // 2 VALORES O MAS.
-    current = current.next
+  if (current.next === null) {
+    
+    let numero = current.value;
+    this.head = null;
+    return numero;
+  }
+
+  while (current.next.next) {
+    current = current.next;
   }
 
   let aux = current.next.value;
   current.next = null;
   return aux;
-}
+};
 
-
-
-LinkedList.prototype.search = function () {
+LinkedList.prototype.search = function (cb) {
+  if (typeof cb == "function") {
+    if (cb(this.head.value)) {
+      return this.head.value;
+    }
+  } else {
+    if (cb == this.head.value) {
+      return this.head.value;
+    }
+  }
   let current = this.head;
-}
-
+  while (current.next) {
+    current = current.next;
+    if (typeof cb == "function") {
+      if (cb(current.value)) {
+        return current.value;
+      }
+    }else {
+      if (cb==current.value){
+        return current.value;
+      }
+      
+    }
+  }
+  return null;
+};
 
 const lista = new LinkedList();
-// AGREGAR DATOS 
-console.log(lista.add(1))
+// AGREGAR DATOS
+console.log(lista.add(1));
 
 // REMOVER ULTIMO VALOR, VALIDAR SI ESTA VACIO O DE UN SOLO NODO
-console.log(lista.remove())
+console.log(lista.remove());
 
-console.log(lista)// mostrar lista 
-
+console.log(lista); // mostrar lista
 
 /*
 Implementar la clase HashTable.
