@@ -84,8 +84,17 @@ BinarySearchTree.prototype.depthFirstForEach = function (cb, type) {
       break;
   }
 };
-BinarySearchTree.prototype.breadthFirstForEach = function () {
-  
+BinarySearchTree.prototype.breadthFirstForEach = function (cb) {
+  if(!pendient){
+  let pendient =[]
+  cb(this.value);
+  if (this.left) pendient.push(this.left);
+  if(this.right) pendient.push(this.right);
+
+  if(pendient.length >=0) 
+  pendient.shift().breadthFirstForEach(cb);
+
+}
 };
 
 const myTree = new BinarySearchTree(20);
