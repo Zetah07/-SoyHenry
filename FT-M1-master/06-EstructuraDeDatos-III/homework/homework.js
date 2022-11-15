@@ -41,6 +41,7 @@ BinarySearchTree.prototype.insert = function (value) {
 };
 
 BinarySearchTree.prototype.size = function () {
+  
   let count = 0;
   count++;
   if (this.left) {
@@ -77,7 +78,7 @@ BinarySearchTree.prototype.depthFirstForEach = function (cb, type) {
       if (this.right) this.right.depthFirstForEach(cb, type);
       cb(this.value);
       break;
-    default:
+    default: //in-order
       if (this.left) this.left.depthFirstForEach(cb, type);
       cb(this.value);
       if(this.right) this.right.depthFirstForEach(cb, type);
