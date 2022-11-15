@@ -52,6 +52,7 @@ function selectionSort(array) {
   // el array recibido como parámetro utilizando dos arreglos
   // Devolver el array ordenado resultante
   // Tu código:
+  
 }
 
 // No modificar nada debajo de esta línea
