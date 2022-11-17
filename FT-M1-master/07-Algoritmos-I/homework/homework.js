@@ -44,7 +44,7 @@ function insertionSort(array) {
     array[b + 1] = aux;
   }     
   return array;
-}
+};
 console.log(insertionSort([5, 1, 10, 21, 18, 2, 6, 12]));
 
 function selectionSort(array) {
