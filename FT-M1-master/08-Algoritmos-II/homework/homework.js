@@ -13,8 +13,7 @@ function mergeSort(array) {
   // Implementar el método conocido como mergeSort para ordenar de menor a mayor
   // el array recibido como parámetro
   // Devolver el array ordenado resultante
-  // Tu código:
-
+  // Tu código:}
 }
 
 // No modificar nada debajo de esta línea
