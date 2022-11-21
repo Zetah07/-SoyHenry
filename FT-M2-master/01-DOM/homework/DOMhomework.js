@@ -6,8 +6,8 @@ let toDoItems = [];
 // Usando querySelector seleccionar dicho span por su id ('createdBy') y luego usando innerHTML
 // agregar tu nombre al final del texto actual. Ej: 'Aplicación creada por Franco'
 // Tu código acá:
-let span = document.querySelector('#createdBy');
-span.innerText += "Johan Castro"; 
+let span = document.querySelector('#createdBy'); // devuelve un elemento span <span id="createdBy"></span>  
+span.innerHTML += "Johan Sebastian"; // <span id="createdBy">Aplicación creada por: Johan Sebastian</span>
 
 
 // Crear una clase denominada 'ToDo' cuyo constructor debe recibir un único parámetro del tipo string
@@ -29,7 +29,7 @@ this.complete = false;
 // Debe setear el atributo 'complete' del ToDo en true
 
 // Tu código acá:
-Todo.prototype.completeToDo = function() {
+ToDo.prototype.completeToDo = function() {
 this.complete = true;
 }
 
@@ -176,7 +176,7 @@ function completeToDo(event) {
 
 
 // Acá debes insertar la llamada a 'displayToDos'
-
+displayToDos();
 
 // ---------------------------- NO CAMBIES NADA DE ACÁ PARA ABAJO ----------------------------- //
 if (typeof module !== 'undefined') {
