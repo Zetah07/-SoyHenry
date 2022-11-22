@@ -173,6 +173,13 @@ nav h1 {
   font-size: 4rem;
   margin: 20px 0;
 }
+ul{
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  padding: 10px 0;
+  font-size: 1.6rem;
+}
 footer {
   color: #22283B;
   background: #f4f4f4;
