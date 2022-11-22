@@ -144,6 +144,7 @@ h4,
 h5 {
   font-family: 'Russo One', sans-serif;
   color: #23293B;
+  align-items: center;
 }
 h1 {
   font-size: 4rem;
@@ -166,19 +167,24 @@ p {
 nav {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 17px 0;
+  background-color: #F6F6F6;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  width: 50%;
+  padding: 10 px;
 }
-nav h1 {
-  font-size: 4rem;
-  margin: 20px 0;
-}
-ul{
-  display: flex;
-  justify-content: space-between;
-  width: 30%;
-  padding: 10px 0;
+nav a {
+  text-decoration: none;
   font-size: 1.6rem;
+  color: #454A59;
+  padding: 10px;
 }
 footer {
   color: #22283B;
@@ -196,8 +202,11 @@ footer {
 .home .intro p {
   padding: 0 15px;
 }
+.home .intro img {
+  border-radius: 20px;
+}
 .home .header__img {
-  border-radius: 20 px;
+  border-radius: 20%;
   margin-top: 5px;
 }
 .home .music-images {
@@ -243,7 +252,7 @@ footer {
   color: white;
   font-size: 1.6rem;
   text-decoration: none;
-  width: 100%;
+  width: 27%;
   justify-content: center;
 }
 .home .actual .actual-img {
