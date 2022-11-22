@@ -84,7 +84,7 @@ function buildToDos(toDos) {
     })
   return shellsArray;// devuelve un array de elementos div
 }
-    
+  
 
 
 
@@ -155,7 +155,7 @@ function completeToDo(event) {
   // DESCOMENTAR LA SIGUIENTE LINEA
   const index = event.target.id;
   // Tu código acá:
-  toDoItems[index].completeToDo(); // llama al método completeToDo del objeto ToDo
+  toDoItems[index].completeToDo(); // toDoItems.add(index).completeToDo();
   displayToDos(); // llama a la función displayToDos para que se actualicen los toDos mostrados en pantalla
 }
 
