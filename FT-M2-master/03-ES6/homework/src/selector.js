@@ -1,4 +1,4 @@
-var traverseDomAndCollectElements = function (matchFunc, startEl) {
+var traverseDomAndCollectElements = function (matchFunc, startEl/*= document.body*/) {
   var resultSet = [];
 
   if (typeof startEl === 'undefined') {
@@ -74,3 +74,4 @@ var $ = function (selector) {
   elements = traverseDomAndCollectElements(selectorMatchFunc);
   return elements;
 };
+
