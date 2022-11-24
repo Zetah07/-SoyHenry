@@ -1,4 +1,4 @@
-var traverseDomAndCollectElements = function (matchFunc, startEl/*= document.body*/) {
+var traverseDomAndCollectElements = function (matchFunc, startEl) {
   var resultSet = [];
 
   if (typeof startEl === 'undefined') {
@@ -9,11 +9,11 @@ var traverseDomAndCollectElements = function (matchFunc, startEl/*= document.bod
   // usa matchFunc para identificar elementos que matchien
 
   // TU CÓDIGO AQUÍ
-    if (matchFunc(startEl)) resultSet.push(startEl);
+    if (matchFunc(startEl)) resultSet.push(startEl); //si el elemento actual matchea, lo pusheo
 
-    for (let i = 0; i < startEl.children.length; i++){
-      var child = traverseDomAndCollectElements(matchFunc, startEl.children[i]); //recursividad para recorrer todos los hijos
-      resultSet = resultSet.concat(child);
+    for (let i = 0; i < startEl.children.length; i++){//recorro los hijos
+      var tuky = traverseDomAndCollectElements(matchFunc, startEl.children[i]); //recursividad para recorrer todos los hijos
+      resultSet = resultSet.concat(tuky);
     }
     return resultSet;
 
@@ -41,14 +41,14 @@ var matchFunctionMaker = function (selector) {
   var matchFunction;
   if (selectorType === 'id') {
     // matchFunction = function(element) {
-    //   if (element ===selector) return true
+    //   if (element ===selector.) return true
     //   else return false}
     matchFunction = (element) => `#${element.id}` === selector ? true : false;
 
   } else if (selectorType === 'class') {
     matchFunction= (element) =>{
-      for (let i = 0; i < element.classList.length; i++){
-        if (`.${element.classList[i]}` === selector) return true;
+      for (let i = 0; i < element.classList.length; i++){//recorro los class
+        if (`.${element.classList[i]}` === selector) return true;//si el class actual matchea, devuelvo true.
       }
       return false;
     }
@@ -75,3 +75,11 @@ var $ = function (selector) {
   return elements;
 };
 
+
+while (alive){
+  music();
+  code();
+  eat();
+  sleep();
+return repeat;
+}
