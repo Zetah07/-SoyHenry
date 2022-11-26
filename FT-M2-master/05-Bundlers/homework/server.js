@@ -1,18 +1,18 @@
-var path = require('path');
+let path = require('path');
 
-var http = require('http');
-var server = http.createServer();
+let http = require('http');
+let server = http.createServer();
 
-var express = require('express');
-var app = express();
+let express = require('express');
+let app = express();
 
-var socketio = require('socket.io');
+let socketio = require('socket.io');
 
 server.on('request', app);
 
-var io = socketio(server);
+let io = socketio(server);
 
-var inMemoryDrawHistory = [];
+let inMemoryDrawHistory = [];
 
 server.listen(1337, function () {
   console.log('The server is listening on port 1337!');
