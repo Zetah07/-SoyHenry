@@ -18,8 +18,8 @@ export default class Botones extends React.Component {
     const { alerts } = this.props;
     return (
       <DivButtons>
-        <button onClick={() => window.alert(alerts.m1)}>Módulo 1</button>
-        <button onClick={() => window.alert(alerts.m2)}>Módulo 2</button>
+        <Buttons onClick={() => window.alert(alerts.m1)}>Módulo 1</Buttons>
+        <Buttons onClick={() => window.alert(alerts.m2)}>Módulo 2</Buttons>
         </DivButtons>
     );
   }
