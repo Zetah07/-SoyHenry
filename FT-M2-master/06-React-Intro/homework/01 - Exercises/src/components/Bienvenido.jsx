@@ -12,7 +12,7 @@ export default function Bienvenido() {
       <h1>mira mamá ya se programar</h1>
       <h3>{studentName}</h3>
       <ul>{techSkills.map((value, index)=> <li key={index}>{value}</li>)}</ul>
-      <Botones alerts={alerts}/>
+      <Botones alertsPopUp={alerts}/>
     </div>
     </>
 
