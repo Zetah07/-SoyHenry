@@ -15,10 +15,10 @@ export default function Zoo() {
   });
   
   React.useEffect(() => {
-     fetch("http://localhost:3001/zoo")
-     .then((res) => res.json())
-     .then((data) =>
-     setZoo({
+    fetch("http://localhost:3001/zoo")
+    .then((res) => res.json())
+    .then((data) =>
+    setZoo({
         ...zoo,
         animals: data.animals,
         species: data.species,
@@ -26,22 +26,22 @@ export default function Zoo() {
       })
       )
       .catch((error) => console.log(error));
-   }, []);
-   
-   function handleInputChange(e) {
-     setZoo({ ...zoo, zooName: e.target.value });
-   }
+  }, []);
+  
+  function handleInputChange(e) {
+    setZoo({ ...zoo, zooName: e.target.value });
+  }
 
   function handleSpecies(e) {
-   setZoo({...zoo,animals: zoo.animals.filter(animal => animal.specie === e.target.value),
-   });
+  setZoo({...zoo,animals: zoo.animals.filter(animal => animal.specie === e.target.value),
+  });
   };
 
 
   function handleAllSpecies() {
     setZoo({
-       ...zoo, 
-       animals: zoo.allAnimals });
+      ...zoo, 
+      animals: zoo.allAnimals });
   }
 
   return (

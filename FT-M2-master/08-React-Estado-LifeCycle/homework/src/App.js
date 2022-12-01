@@ -1,4 +1,5 @@
 import React from "react";
+import "./components/Nav";
 import "./App.css";
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
   return (
     <div className="App" style={{ padding: "25px" }}>
       <div>
-        <nav onSearch={onSearch} />
+        <Nav onSearch={onSearch} />
       </div>
 
       <div>
