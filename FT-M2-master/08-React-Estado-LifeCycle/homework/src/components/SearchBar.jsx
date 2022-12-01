@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 
-export default function SearchBar({onSearch}) {
+export default function SearchBar(props) {
+  const [userInput, setUserInput] =useState("");
+
+  function handleChange(e) {
+    setUserInput(e.target.value);
+  };
   return (
-    <form onSubmit={(e) => {
-      e.preventDefault();
-      onSearch("Cairns");
-    }}>
-      <input
-        type="text"
-        placeholder="Ciudad..."
-      />
-      <input type="submit" value="Agregar" />
-    </form>
+    <div>
+      <input type='search' value={userInput} onChange={handleChange} />
+      <button onClick={() => props.onSearch(userInput)}>Search</button>
+      </div>
   );
 }
