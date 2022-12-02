@@ -58,25 +58,9 @@ export default function Contact() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    if (Object.keys(errors).length === 0) alert('Debes corregir los errores');
-      else {
-        alert('Datos completos');
-        setInputs({
-          name: "",
-          email: "",
-          phone: 0,
-          subject: "",
-          message: "",
-        });
-      }
-    setErrors({
-      name: "",
-      email: "",
-      phone: "",
-      subject: "",
-      message: "",
-    });
-  }
+    if (Object.keys(errors).length === 0) alert ('Datos completos');
+      else alert ('Debes corregir los errores');
+    }
 
   return (
     <div>
