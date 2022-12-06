@@ -4,12 +4,12 @@ export default function SearchBar(props) {
   const [userInput, setUserInput] =useState("");
 
   function handleChange(e) {
-    setUserInput(e.target.value);
+    // setUserInput(e.target.value);
   };
   return (
     <div>
       <input type='search' value={userInput} onChange={handleChange} />
-      <button onClick={() => props.onSearch(userInput)}>Search</button>
+      <button onClick={props.onSearch}>Search</button>
       </div>
   );
 }
