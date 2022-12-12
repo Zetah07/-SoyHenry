@@ -25,7 +25,8 @@
     "redux": "^4.2.0",
     "redux-mock-store": "^1.5.4",
     "redux-thunk": "^2.4.1",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "yarn": "^1.22.19"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -38,9 +39,6 @@
     "test:04": "jest tests/04.test.js",
     "test:05": "jest tests/05.test.js",
     "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": {
     "production": [
@@ -55,6 +53,8 @@
     ]
   },
   "devDependencies": {
+    "eslint": "^8.29.0",
+    "eslint-plugin-react": "^7.31.11",
     "standard": "^17.0.0"
   },
   "standard": {
