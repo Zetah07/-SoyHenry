@@ -1,10 +1,5 @@
 const commands = require("./commands");
 
-function done(output){
-    process.stdout.write(output);
-    process.stdout.write("\nprompt > ");
-}
-
 
 // Output un prompt
 process.stdout.write("prompt > ");
